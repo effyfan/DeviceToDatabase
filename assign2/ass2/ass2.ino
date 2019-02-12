@@ -29,7 +29,7 @@ MqttClient mqtt(net);
 DHT dht(DHTPIN, DHTTYPE);
 
 // distance sensor
-int distancePin = 5;
+int distancePin = 1;
 
 String temperatureTopic = "itp/" + DEVICE_ID + "/temperature";
 String humidityTopic = "itp/" + DEVICE_ID + "/humidity";
@@ -69,14 +69,15 @@ void loop() {
 
     float temperature = dht.readTemperature(true);
     float humidity = dht.readHumidity();
-    float distance = analogRead(distancePin);
+    float disSensor = analogRead(distancePin);
+    float distance = (12787.0 / (disSensor - 3.0)) - 4.0;
 
     Serial.print(temperature);
     Serial.print("°F ");
     Serial.print(humidity);
     Serial.print("% RH ");
     Serial.print(distance);
-    Serial.println("cm");
+    Serial.println(" cm");
     
     mqtt.beginMessage(temperatureTopic);
     mqtt.print(temperature); 
