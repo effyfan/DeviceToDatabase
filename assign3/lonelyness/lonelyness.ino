@@ -44,7 +44,7 @@ String soundTopic = "itp/" + DEVICE_ID + "/r20_sound";
 String motionTopic = "itp/" + DEVICE_ID + "/r20_motion";
 
 // Publish every 2 minutes for the workshop. Real world apps need this data every 5 or 10 minutes.
-unsigned long publishInterval = 10 * 12000;
+unsigned long publishInterval = 10 * 30000;
 unsigned long lastMillis = 0;
 
 unsigned long soundInterval = 10 * 1000;
