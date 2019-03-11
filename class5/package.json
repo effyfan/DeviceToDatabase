@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mqtt": "^2.18.8"
+    "aws-sdk": "^2.419.0",
+    "mqtt": "^2.18.8",
+    "pg": "^7.8.2"
   }
 }

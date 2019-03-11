@@ -36,14 +36,14 @@ float lastVibrationReading;
 float soundReading;
 float lastSoundReading;
 
-String temperatureTopic = "itp/" + DEVICE_ID + "/r20_temperature";
-String humidityTopic = "itp/" + DEVICE_ID + "/r20_humidity";
-String photocellTopic = "itp/" + DEVICE_ID + "/r20_photocell";
-String vibrationTopic = "itp/" + DEVICE_ID + "/r20_vibration";
-String soundTopic = "itp/" + DEVICE_ID + "/r20_sound";
-String motionTopic = "itp/" + DEVICE_ID + "/r20_motion";
+String temperatureTopic = "itp/" + DEVICE_ID + "/temperature";
+String humidityTopic = "itp/" + DEVICE_ID + "/humidity";
+String photocellTopic = "itp/" + DEVICE_ID + "/photocell";
+String vibrationTopic = "itp/" + DEVICE_ID + "/vibration";
+String soundTopic = "itp/" + DEVICE_ID + "/sound";
+String motionTopic = "itp/" + DEVICE_ID + "/motion";
 
-// Publish every 2 minutes for the workshop. Real world apps need this data every 5 or 10 minutes.
+// Publish every 5 minutes
 unsigned long publishInterval = 10 * 30000;
 unsigned long lastMillis = 0;
 
